@@ -1,0 +1,14 @@
+.text-area{
+    -fx-padding: 15px;
+    -fx-border-insets: 15px;
+    -fx-background-insets: 15px;
+}
+
+.left-area{
+    -fx-control-inner-background: #BACEC1;
+}
+
+.right-area{
+    -fx-control-inner-background: #CAEBF2;
+}
+

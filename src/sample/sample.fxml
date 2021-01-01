@@ -1,8 +1,59 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="200.0" style="-fx-background-color: #362159;">
+         <children>
+            <ImageView fitHeight="148.0" fitWidth="213.0" layoutX="26.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Telegram-circular-icon-vector-PNG.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="729.0" text="GeekBrains" textFill="#0dbdc6" />
+            <Label layoutX="81.0" layoutY="750.0" text="2021" textFill="#0dbdc6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="38.0" text="My Chat" textFill="#0dbdc6">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="85.0" text="Client" textFill="#0dbdc6">
+               <font>
+                  <Font name="System Bold Italic" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="200.0" layoutY="680.0" prefHeight="120.0" prefWidth="800.0" style="-fx-background-color: #2f2fa2;">
+         <children>
+            <TextField fx:id="textMessage" layoutX="40.0" layoutY="45.0" prefHeight="31.0" prefWidth="556.0" />
+            <Button fx:id="buttonSend" layoutX="617.0" layoutY="28.0" mnemonicParsing="false" onAction="#addMessage" prefHeight="65.0" prefWidth="169.0" text="   Send" textFill="#2f2fa2">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/telegram.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ScrollPane fx:id="scrollMes" layoutX="200.0" layoutY="-1.0" prefHeight="681.0" prefWidth="800.0">
+         <content>
+            <FlowPane fx:id="flowChat" prefHeight="678.0" prefWidth="780.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
